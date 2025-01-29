@@ -10,8 +10,22 @@ const Signup = () => {
   return (
     <form action={formAction} className="w-full max-w-xs">
       <Stack spacing={2}>
-        <TextField label="Email" variant="outlined" type="email" />
-        <TextField label="Password" variant="outlined" type="password" />
+        <TextField
+          name="email"
+          label="Email"
+          variant="outlined"
+          type="email"
+          helperText={state.error}
+          error={!!state.error}
+        />
+        <TextField
+          name="password"
+          label="Password"
+          variant="outlined"
+          type="password"
+          helperText={state.error}
+          error={!!state.error}
+        />
         <Button type="submit" variant="contained">
           Signup
         </Button>
